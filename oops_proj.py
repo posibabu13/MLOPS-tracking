@@ -1,12 +1,29 @@
 class messagebook:
+    __user_id=0
 
     def __init__(self):
+        self.__name= "Default User"
+        self.id=messagebook.__user_id
+        messagebook.__user_id +=1
+        # self.user_id=0
+        # self.user_id +=1
         self.username=''
         self.password='' 
         self.loggedin=False
-        self.menu()
+        # self.menu()
+    @staticmethod
+    def get_id(self):
+        return messagebook.__user_id
+    @staticmethod
+    def set_id(val):
+        messagebook.__user_id=val
 
+    def get_name(self):
+        return self.__name
     
+    def set_name(self,value):
+        self.__name=value
+        
     def menu(self):
         user_input=input("""" This code will give the options to the user like
                               1.To signup
